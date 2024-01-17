@@ -1,31 +1,223 @@
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 2.5vw;
+}
 
 .navigation_bar {
+    position: fixed;
+    width: 100%;
     max-width: 100%;
-    height: 2.6vws;
-    max-height: 2.8229166666666667vw;
-    background-color: aquamarine;
-    /* display: flex; */
+    height: 2.604vw;
+    max-height: 2.704vw;
 }
-ul{
-    list-style-type:  none;
+
+ul {
+    list-style-type: none;
     justify-content: space-between;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: gray;
-}
-li{
-    float: left;
-}
-li a{
-    display: block;
-    color:  white;
-    text-align: center;
-    pad: 14px 16px;
-    margin: 15px 25px;
-    text-decoration: none;
+    background-color: rgba(255, 192, 203, 0.8);
+    max-height: 2.704vw;
 }
 
-li a:hover{
-    background-color: aqua;
+.navigation_bar_left {
+    float: left; 
+}
+.nav{
+    width: 6vw;
+    height: 2.5vw;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.navigation_bar_right {
+    float: right;
+}
+
+.sub-menu {
+    position: absolute;
+    display: none;
+}
+
+.navigation_bar li:hover>.sub-menu {
+    display: block;
+    transition: transform 2s ease;
+    border: 0.2vw solid rgba(97, 96, 96, 0.2);
+}
+.navigation_bar_right_find {
+    margin-top: 0.7vw;
+    position: absolute;
+    right: 10vw;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    font-weight: bold;
+    text-align: -webkit-match-parent;
+}
+
+li a:hover {
+    color: aqua;
+    font-size: 1.083vw;
+}
+
+.footer {
+    width: 100%;
+    /* height: 100%; */
+    max-width: 83.33vw;
+    padding-left: 8.33vw;
+    padding-right: 8.33vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    height: 4.688vw;
+    bottom: 0;
+    background-color: rgb(209, 205, 205);
+}
+
+.loginBorder {
+    width: 25vw;
+    height: 20.833vw;
+    position: absolute;
+    margin-top: 8.333vw;
+    margin-left: 37.5vw;
+    border: 0.042vw solid black;
+    border-radius: 0.8333vw;
+}
+
+.loginBorder_title {
+    font-family: Arial;
+    font-size: 1.667vw;
+    margin-top: 2.5vw;
+    text-align: center;
+    font-weight: bold;
+    color: pink;
+}
+
+.loginBorder_userName {
+    margin: 1.25vw 4.167vw;
+    width: 16.667vw;
+    height: 1.667vw;
+    border: none;
+    border-bottom: 0.083vw solid black;
+}
+
+.loginBorder_userPassword {
+    margin: 0vw 4.167vw;
+    width: 16.667vw;
+    height: 1.667vw;
+    border: none;
+    border-bottom: 0.083vw solid black;
+}
+
+.loginBorder_userName::placeholder {
+    color: pink;
+}
+
+.loginBorder_border {
+    margin: 1.667vw 4.167vw;
+    width: 70%;
+    height: 2.5vw;
+    /* background-color: beige; */
+}
+
+.loginBorder_forgetPassword {
+    position: relative;
+    top: 0.47vw;
+    font-size: 0.833vw;
+    text-decoration: none;
+    border: none;
+    background-color: white;
+    transition-duration: 0.5s;
+}
+
+.loginBorder_userPassword::placeholder {
+    color: pink;
+}
+
+.loginBorder_forgetPassword:hover {
+    font-size: 1vw;
+}
+
+.loginBorder_login {
+    position: absolute;
+    width: 6.667vw;
+    font-size: 0.95vw;
+    height: 1.667vw;
+    right: 4.167vw;
+    background-color: pink;
+    border: 0.2vw solid rgb(122, 62, 122);
+    border-radius: 0.5vw;
+    transition-duration: 0.5s;
+}
+
+.loginBorder_login:hover {
+    background-color: rgb(240, 166, 178);
+    font-size: 1.1vw;
+    color: aquamarine;
+}
+
+#Slider {
+    padding-bottom: 1.5vw;
+    border-bottom: 0.1vw solid #000;
+    overflow: hidden;
+}
+
+.slider_container {
+    display: block;
+    position: relative;
+    padding-top: 56.25%;
+    transition: 0.3s;
+}
+
+.slider_container img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.nav>.navigation_bar_sales>svg{
+    transition: transform 0.2s ease;
+}
+.nav>.navigation_bar_sales:hover .nav>.navigation_bar_sales>svg{
+    transform: rotateX(180deg);
+}
+
+.dot_container {
+    position: absolute;
+    height: 1.5vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.dot {
+    height: 0.9vw;
+    width: 0.9vw;
+    background: #CCC contain;
+    border-radius: 50%;
+    margin-right: 0.8vw;
+}
+
+.dot.active {
+    background-color: #333;
 }
