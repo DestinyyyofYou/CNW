@@ -1,5 +1,7 @@
+
 * {
     margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -23,7 +25,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: rgba(255, 192, 203, 0.8);
-    max-height: 2.704vw;
+    max-height: 5vw;
 }
 
 .navigation_bar_left {
@@ -41,12 +43,13 @@ ul {
     float: right;
 }
 
-.sub-menu {
+ul.sub-menu {
     position: absolute;
     display: none;
 }
 
-.navigation_bar li:hover>.sub-menu {
+.nav:hover .sub-menu {
+    top:2.5vw;
     display: block;
     transition: transform 2s ease;
     border: 0.2vw solid rgba(97, 96, 96, 0.2);
@@ -54,7 +57,7 @@ ul {
 .navigation_bar_right_find {
     margin-top: 0.7vw;
     position: absolute;
-    right: 10vw;
+    right: 12vw;
 }
 
 li a {
@@ -80,13 +83,13 @@ li a:hover {
     padding-right: 8.33vw;
     margin-left: auto;
     margin-right: auto;
-}
-
-.footer {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 4.688vw;
     bottom: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(209, 205, 205);
 }
 
@@ -174,8 +177,16 @@ li a:hover {
 
 #Slider {
     padding-bottom: 1.5vw;
-    border-bottom: 0.1vw solid #000;
+    border: 0.1vw solid #000;
     overflow: hidden;
+    width: 50vw;
+    height: 28vw;
+    position: absolute;
+    left: 24.5vw;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
 }
 
 .slider_container {
@@ -193,12 +204,6 @@ li a:hover {
     top: 0;
     left: 0;
 }
-.nav>.navigation_bar_sales>svg{
-    transition: transform 0.2s ease;
-}
-.nav>.navigation_bar_sales:hover .nav>.navigation_bar_sales>svg{
-    transform: rotateX(180deg);
-}
 
 .dot_container {
     position: absolute;
@@ -213,9 +218,10 @@ li a:hover {
 .dot {
     height: 0.9vw;
     width: 0.9vw;
-    background: #CCC contain;
+    background: #CCC;
     border-radius: 50%;
     margin-right: 0.8vw;
+    cursor: pointer;
 }
 
 .dot.active {
